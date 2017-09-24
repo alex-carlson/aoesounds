@@ -1,0 +1,20 @@
+body { background-color: white; margin: 0; padding: 0; font-family: sans-serif; font-size: 1em; background-color: tan;}
+p { margin-bottom: 10px; }
+button, input { margin: 3px; float: left; padding: 8px 12px; width: 300px;}
+input { color: white; background-color: black; width: 600px; padding: 3px 1px; }
+ul { float: left; clear: both; width: 600px; list-style-type: none; margin-left: 5px; padding-left: 5px; padding: 5px; height: 400px; overflow-y: scroll; background-color: rgba(0, 0, 0, 0.2); margin-top: 5px; }
+ul li { padding: 3px 0; }
+ul li:before { content: "You: "; color: red; }
+.half { width: 50%; float: right; margin-top: 15px; }
+
+@media (max-width: 1240px) {
+
+  html, body{
+    width: 100%;
+  }
+  .half { width: 100%; }
+  button { width: 50%; margin: 0; height: 50px; background-color: white; }
+  input, ul { width: 100%; }
+  input { margin-bottom: 100px; }
+
+}

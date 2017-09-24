@@ -1,60 +1,12 @@
-<!DOCTYPE html>
+<html>
 
 <head>
 
 	<title>AoE Soundboard</title>
 
-	<!-- JavaScript -->
-	<script type="text/javascript">
-		// Put code here or set the src attribute
+	<link rel="stylesheet" href="style.css">
 
-    function playAudio(data){
-      if(event.keyCode == 13){
-        var channel = document.createElement("audio");
-
-        if(data.value < 10 && data.value != ""){
-            channel.src = "sounds/0" + data.value + ".mp3";
-        } else {
-          channel.src = "sounds/" + data.value + ".mp3";
-
-        }
-
-        channel.play();
-
-        if(data.value.toString() == ""){
-          return;
-        }
-
-        var li = document.createElement("li");
-        var ul = document.getElementById("log");
-
-        li.appendChild(document.createTextNode(data.value));
-        ul.appendChild(li);
-
-        data.value = "";
-      }
-    }
-
-    function playSound(id){
-      var channel = document.createElement("audio");
-      channel.src = "sounds/" + id + ".mp3";
-      channel.play();
-    }
-	</script>
-
-	<!-- CSS -->
-	<style type="text/css">
-
-		body { background-color: white; margin: 0; padding: 0; font-family: sans-serif; font-size: 12px; background-color: tan;}
-		p { margin-bottom: 10px; }
-    button, input { margin: 3px; float: left; padding: 8px 12px; width: 300px;}
-    input { color: white; background-color: black; width: 600px; padding: 3px 1px; }
-    ul { float: left; clear: both; width: 600px; list-style-type: none; margin-left: 5px; padding-left: 5px; padding: 5px; height: 400px; overflow-y: scroll; background-color: rgba(0, 0, 0, 0.2); }
-    ul li { padding: 3px 0; }
-    ul li:before { content: "You: "; color: red;}
-
-	</style>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -101,54 +53,94 @@
   <audio id="sound41" src="sounds/41.mp3"></audio>
   <audio id="sound42" src="sounds/42.mp3"></audio>
 
-	<button onclick="playSound('01')">Yes</button>
- 	<button onclick="playSound('02')">No</button>
-  <button onclick="playSound('03')">Food Please</button>
-  <button onclick="playSound('04')">Wood Please</button>
-  <button onclick="playSound('05')">Gold Please</button>
-  <button onclick="playSound('06')">Stone Please</button>
-  <button onclick="playSound('07')">Ahh</button>
-  <button onclick="playSound('08')">All Hail</button>
-  <button onclick="playSound('09')">Oooh</button>
-  <button onclick="playSound('10')">Back to age 1</button>
-  <button onclick="playSound('11')">Herb Laugh</button>
-  <button onclick="playSound('12')">Being Rushed</button>
-  <button onclick="playSound('13')">Blame Your ISP</button>
-  <button onclick="playSound('14')">Start The Game</button>
-  <button onclick="playSound('15')">Don't Point That Thing</button>
-  <button onclick="playSound('16')">Enemy Sighted</button>
-  <button onclick="playSound('17')">It Is Good</button>
-  <button onclick="playSound('18')">I Need A Monk</button>
-  <button onclick="playSound('19')">Long Time No Seige</button>
-  <button onclick="playSound('20')">My Granny</button>
-  <button onclick="playSound('21')">Nice Town, I'll Take It</button>
-  <button onclick="playSound('22')">Quit Touchin</button>
-  <button onclick="playSound('23')">Raiding Party</button>
-  <button onclick="playSound('24')">Dadgum</button>
-  <button onclick="playSound('25')">Smite Me</button>
-  <button onclick="playSound('26')">The Wonder</button>
-  <button onclick="playSound('27')">You Play 2 Hours</button>
-  <button onclick="playSound('28')">You Should See The Other Guy</button>
-  <button onclick="playSound('29')">Roggan</button>
-  <button onclick="playSound('30')">Wololo</button>
-  <button onclick="playSound('31')">Attack An Enemy Now</button>
-  <button onclick="playSound('32')">Cease Creating Extra Villagers</button>
-  <button onclick="playSound('33')">Create Extra Villagers</button>
-  <button onclick="playSound('34')">Build A Navy</button>
-  <button onclick="playSound('35')">Stop Building A Navy</button>
-  <button onclick="playSound('36')">Wait For My Signal To Attack</button>
-  <button onclick="playSound('37')">Build A Wonder</button>
-  <button onclick="playSound('38')">Give Me Your Extra Resources</button>
-  <button onclick="playSound('39')">Ally</button>
-  <button onclick="playSound('40')">Enemy</button>
-  <button onclick="playSound('41')">Neutral</button>
-  <button onclick="playSound('42')">What Age Are You In</button>
-
-  <input type="text" onkeydown="playAudio(this)">
-
-  <ul id="log"></ul>
+	<section class="half">
+		<button onclick="playSound('01')">Yes</button>
+	 	<button onclick="playSound('02')">No</button>
+	  <button onclick="playSound('03')">Food Please</button>
+	  <button onclick="playSound('04')">Wood Please</button>
+	  <button onclick="playSound('05')">Gold Please</button>
+	  <button onclick="playSound('06')">Stone Please</button>
+	  <button onclick="playSound('07')">Ahh</button>
+	  <button onclick="playSound('08')">All Hail</button>
+	  <button onclick="playSound('09')">Oooh</button>
+	  <button onclick="playSound('10')">Back to age 1</button>
+	  <button onclick="playSound('11')">Herb Laugh</button>
+	  <button onclick="playSound('12')">Being Rushed</button>
+	  <button onclick="playSound('13')">Blame Your ISP</button>
+	  <button onclick="playSound('14')">Start The Game</button>
+	  <button onclick="playSound('15')">Don't Point That Thing</button>
+	  <button onclick="playSound('16')">Enemy Sighted</button>
+	  <button onclick="playSound('17')">It Is Good</button>
+	  <button onclick="playSound('18')">I Need A Monk</button>
+	  <button onclick="playSound('19')">Long Time No Seige</button>
+	  <button onclick="playSound('20')">My Granny</button>
+	  <button onclick="playSound('21')">Nice Town, I'll Take It</button>
+	  <button onclick="playSound('22')">Quit Touchin</button>
+	  <button onclick="playSound('23')">Raiding Party</button>
+	  <button onclick="playSound('24')">Dadgum</button>
+	  <button onclick="playSound('25')">Smite Me</button>
+	  <button onclick="playSound('26')">The Wonder</button>
+	  <button onclick="playSound('27')">You Play 2 Hours</button>
+	  <button onclick="playSound('28')">You Should See The Other Guy</button>
+	  <button onclick="playSound('29')">Roggan</button>
+	  <button onclick="playSound('30')">Wololo</button>
+	  <button onclick="playSound('31')">Attack An Enemy Now</button>
+	  <button onclick="playSound('32')">Cease Creating Extra Villagers</button>
+	  <button onclick="playSound('33')">Create Extra Villagers</button>
+	  <button onclick="playSound('34')">Build A Navy</button>
+	  <button onclick="playSound('35')">Stop Building A Navy</button>
+	  <button onclick="playSound('36')">Wait For My Signal To Attack</button>
+	  <button onclick="playSound('37')">Build A Wonder</button>
+	  <button onclick="playSound('38')">Give Me Your Extra Resources</button>
+	  <button onclick="playSound('39')">Ally</button>
+	  <button onclick="playSound('40')">Enemy</button>
+	  <button onclick="playSound('41')">Neutral</button>
+	  <button onclick="playSound('42')">What Age Are You In</button>
+	</section>
+	<section class="half">
+	  <ul id="log"></ul>
+		<input type="text" onkeydown="playAudio(this)">
+	</section>
 
 
 </body>
+
+<!-- JavaScript -->
+<script type="text/javascript">
+	// Put code here or set the src attribute
+
+	function playAudio(data){
+		if(event.keyCode == 13){
+			var channel = document.createElement("audio");
+
+			if(data.value < 10 && data.value != ""){
+					channel.src = "sounds/0" + data.value + ".mp3";
+			} else {
+				channel.src = "sounds/" + data.value + ".mp3";
+
+			}
+
+			channel.play();
+
+			if(data.value.toString() == ""){
+				return;
+			}
+
+			var li = document.createElement("li");
+			var ul = document.getElementById("log");
+
+			li.appendChild(document.createTextNode(data.value));
+			ul.appendChild(li);
+
+			data.value = "";
+		}
+	}
+
+	function playSound(id){
+		var channel = document.createElement("audio");
+		channel.src = "sounds/" + id + ".mp3";
+		channel.play();
+	}
+</script>
 
 </html>
